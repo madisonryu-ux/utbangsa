@@ -1,0 +1,138 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>웃음방위사령부 | 안전보장회의 인트라넷</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap');
+:root{--navy:#08182d;--ink:#e9f5ff;--muted:#a9c1d7;--cyan:#7ee5e2;--line:rgba(225,245,255,.21)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font:14px 'DM Sans','Noto Sans KR',sans-serif;background:radial-gradient(ellipse at 18% 12%,#275d88 0,transparent 37%),radial-gradient(ellipse at 83% 25%,#175e70 0,transparent 39%),radial-gradient(ellipse at 50% 100%,#163d62 0,transparent 45%),#061323;background-attachment:fixed;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;background-image:linear-gradient(rgba(210,244,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(210,244,255,.12) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,transparent,#000 40%,transparent)}
+body:after{content:"";position:fixed;z-index:-1;width:550px;height:550px;top:10%;right:-220px;border-radius:50%;background:radial-gradient(circle at 36% 36%,rgba(116,235,225,.42),rgba(31,108,162,.24) 45%,transparent 70%);filter:blur(18px);pointer-events:none}
+.top{height:40px;display:flex;align-items:center;justify-content:space-between;gap:10px;max-width:1160px;margin:auto;padding:0 18px;font-size:10px;letter-spacing:1.6px;color:#c7e1ef}
+.top:before{content:"● SECURE INTERNAL NETWORK";color:#86e6ce;font-weight:800;font-size:10px}
+.shell{max-width:1160px;margin:0 auto;padding:0 18px 60px}
+.govbar{margin:5px 0 14px;padding:12px 18px;background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(22px);display:flex;justify-content:space-between;gap:10px;color:#c6d9e9;font-size:11px;box-shadow:inset 0 1px rgba(255,255,255,.12)}
+.govbar strong{color:#eaffff}
+.navlinks{display:flex;gap:7px;margin:0 0 18px;padding:7px;border-radius:17px;background:rgba(255,255,255,.09);border:1px solid var(--line);box-shadow:0 10px 28px #0002;backdrop-filter:blur(22px)}
+.navlinks span{flex:1;text-align:center;padding:13px 4px;border-radius:11px;color:#c4d8e7;font-size:12px;font-weight:700}
+.navlinks span:first-child{background:linear-gradient(145deg,rgba(178,252,250,.27),rgba(114,183,244,.12));color:#fff;box-shadow:inset 0 1px rgba(255,255,255,.4),0 5px 18px #071b3060}
+.sheet{position:relative;overflow:hidden;border:1px solid rgba(223,247,255,.25);border-radius:27px;background:linear-gradient(145deg,rgba(255,255,255,.19),rgba(255,255,255,.055) 54%,rgba(130,212,244,.09));backdrop-filter:blur(34px) saturate(150%);box-shadow:0 28px 85px #010d2080,inset 0 1px rgba(255,255,255,.35)}
+.sheet:before{content:"";position:absolute;top:-230px;right:-100px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(107,225,226,.22),transparent 67%);pointer-events:none}
+.sheet:after{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#eaffff9c,transparent)}
+.inner{position:relative;padding:0 36px 34px}
+.mast{display:flex;align-items:center;gap:22px;padding:42px 6px 30px}
+.seal{width:100px;height:100px;border:1px solid #c4f8f47c;border-radius:26px;display:grid;place-items:center;flex-shrink:0;background:linear-gradient(140deg,#e6ffff4d,#75d2e21a);box-shadow:inset 0 2px #fff7,inset 0 -4px 15px #03436844,0 16px 30px #021b2e77;transform:rotate(-6deg);color:#c8ffff}
+.seal svg{width:63px;height:63px;filter:drop-shadow(0 4px 7px #071a2a88)}
+.seal:after{content:"L D C";position:absolute;bottom:8px;font-size:9px;letter-spacing:4px;font-weight:800}
+.eyebrow{color:#8ff1e8;font-size:11px;letter-spacing:2px;font-weight:800}
+.mast h1{margin:7px 0;font-size:clamp(28px,4.4vw,48px);line-height:1.18;letter-spacing:-2px;font-weight:900;text-shadow:0 4px 20px #00182b60}
+.subtitle{font-size:10px;color:#bdd8e9;letter-spacing:1.7px}
+.ribbon{display:flex;justify-content:space-between;gap:8px;margin:0 -36px 24px;padding:14px 36px;background:linear-gradient(90deg,rgba(6,26,49,.65),rgba(35,94,121,.3));border-block:1px solid rgba(255,255,255,.12);font-size:10px;letter-spacing:1.3px;color:#d0e8f4}
+.ribbon span{padding:0 10px;border-right:1px solid #ffffff38}.ribbon span:last-child{border:0}
+.breadcrumb{font-size:11px;color:#bed0df;margin:0 0 22px}
+.govbanner{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:18px 0;padding:21px 24px;background:linear-gradient(115deg,rgba(136,237,226,.19),rgba(148,200,255,.09));border:1px solid rgba(192,245,247,.32);border-radius:18px;box-shadow:inset 0 1px #fff5,0 12px 30px #04192b30}
+.govbanner b{color:#e4fffe;font-size:15px}.govbanner small{display:block;margin-top:8px;color:#c0d7e4;line-height:1.8}
+.quicklinks{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:20px 0}
+.quicklinks div{padding:18px 10px;border:1px solid rgba(218,246,255,.24);border-radius:15px;text-align:center;background:linear-gradient(155deg,rgba(255,255,255,.16),rgba(255,255,255,.035));box-shadow:inset 0 1px #fff4,0 10px 20px #00162c30;font-size:11px;color:#d4e7f0}
+.quicklinks b{display:block;font-size:24px;color:#91f4eb;margin-bottom:7px;font-weight:800;text-shadow:0 0 22px #75e7dc65}
+.stamp{display:inline-block;padding:7px 12px;border:1px solid #f2b6aa8c;border-radius:8px;background:#e97f731c;color:#ffccc0;font-size:11px;letter-spacing:2px;font-weight:800;transform:rotate(-3deg)}
+.panel{margin-top:18px;padding:clamp(20px,4vw,36px);border-radius:22px;border:1px solid rgba(224,248,255,.29);background:linear-gradient(155deg,rgba(246,255,255,.18),rgba(232,250,255,.055));box-shadow:inset 0 1px #fff5,0 20px 48px #00162945;backdrop-filter:blur(24px)}
+.section-tag{display:inline-flex;padding:8px 13px;border:1px solid #b7ffff48;border-radius:50px;color:#a4f5ed;background:#5fc6cf19;font-size:10px;letter-spacing:1.3px;font-weight:800}
+.panel h2{font-size:clamp(21px,3vw,29px);margin:18px 0 14px;letter-spacing:-.8px}
+.muted{color:#bed1df;font-size:13px;line-height:1.85}
+.field-label{display:block;margin:23px 0 10px;font-weight:700;color:#e9f8ff}
+select,button{font:inherit}
+select{appearance:none;width:100%;padding:17px 44px 17px 17px;border-radius:13px;border:1px solid #d9faff69;background:linear-gradient(140deg,rgba(255,255,255,.2),rgba(255,255,255,.07));color:#fff;font-size:15px;box-shadow:inset 0 1px #fff5;outline:none}
+select option{color:#13243b;background:#eaf4f9}
+.btn{width:100%;min-height:54px;margin-top:15px;padding:15px 20px;border:1px solid #d8ffff9e;border-radius:13px;background:linear-gradient(135deg,#c6fff1,#86dce9 55%,#8dbaf3);color:#123147;font-weight:900;letter-spacing:.3px;cursor:pointer;box-shadow:inset 0 2px #ffffffb8,inset 0 -3px #217e9b40,0 12px 30px #0a394e88;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:inset 0 2px #ffffffb8,0 18px 35px #0a394eaa}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.btn.secondary{background:rgba(255,255,255,.1);border-color:#d5f6ff61;color:#eaffff;box-shadow:inset 0 1px #fff4}
+.meta{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.tag{display:inline-block;padding:10px 13px;background:#9ff4e522;border:1px solid #a3ffef69;border-radius:11px;color:#d7fffa;font-size:12px;font-weight:800}
+.question{font-size:clamp(23px,4vw,34px);line-height:1.55;font-weight:900;margin:22px 0 27px;letter-spacing:-1px}
+.candidates{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.candidate{min-height:58px;padding:13px 7px;border:1px solid #e5faff55;border-radius:13px;background:linear-gradient(145deg,#ffffff2c,#ffffff0b);color:#f1fbff;font-weight:800;cursor:pointer;box-shadow:inset 0 1px #fff4,0 8px 17px #02192d42;transition:transform .15s,background .15s}
+.candidate:hover{transform:translateY(-2px);border-color:#c9ffff}.candidate.selected{background:linear-gradient(135deg,#c7fff1,#81d4ec);color:#12334a;border-color:#fff;box-shadow:0 0 0 2px #8de9e34d,0 12px 25px #061b2c75}
+.result{margin:15px 0}.resulthead{display:flex;justify-content:space-between;font-weight:700;margin-bottom:7px}
+.track{height:13px;border-radius:30px;background:#041b2b6e;border:1px solid #b6f3f34d;overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,#74d5d3,#b9fce8);border-radius:30px;box-shadow:0 0 16px #76ffdf66;transition:width .3s}
+.notice{margin:22px 0;padding:18px 20px;border-radius:15px;background:#0b223c77;border:1px solid #c2f1fa3c;color:#c5dae8;font-size:12px;line-height:1.8}
+.footer{display:flex;justify-content:space-between;gap:12px;margin:30px -36px -34px;padding:22px 36px;border-top:1px solid #ffffff2e;color:#b5cddd;font-size:10px;letter-spacing:.6px}
+.status{font-size:12px;margin:12px 0;line-height:1.7}.error{color:#ffd2b7}.success{color:#a9fbe4}.hidden{display:none!important}
+button:focus-visible,select:focus-visible{outline:3px solid #b9fff5;outline-offset:3px}
+@media(max-width:650px){.top{font-size:8px;letter-spacing:.3px}.top:before{font-size:8px;letter-spacing:.2px}.shell{padding:0 10px 35px}.govbar{font-size:10px;padding:11px}.govbar span:last-child{display:none}.navlinks{gap:2px;padding:5px}.navlinks span{font-size:10px;padding:11px 2px}.inner{padding:0 18px 22px}.mast{padding:28px 0 23px;gap:14px}.seal{width:72px;height:72px;border-radius:19px}.seal svg{width:46px;height:46px}.seal:after{font-size:6px;bottom:5px}.mast h1{letter-spacing:-1px}.subtitle{font-size:8px;letter-spacing:.5px}.eyebrow{font-size:9px}.ribbon{margin:0 -18px 20px;padding:12px 8px;font-size:8px;letter-spacing:0}.ribbon span{padding:0 5px}.govbanner{padding:16px}.quicklinks{gap:6px}.quicklinks div{padding:14px 3px;font-size:9px}.quicklinks b{font-size:20px}.panel{padding:20px}.candidates{grid-template-columns:repeat(2,1fr)}.footer{margin:25px -18px -22px;padding:20px 18px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* 로그인은 신원확인만, 접속 후에는 전자문서 수신함으로 전환 */
+.inbox-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:12px}
+.inbox-head h2{margin:12px 0 5px}.inbox-counter{min-width:105px;text-align:center;padding:15px 18px;border-radius:17px;background:linear-gradient(140deg,#e4fff341,#6ddde51a);border:1px solid #bafff280;box-shadow:inset 0 1px #fff6,0 10px 25px #001b2b44}
+.inbox-counter strong{font-size:34px;line-height:1.1;display:block;color:#a4fff0}.inbox-counter span{font-size:11px;color:#c3e9e8}
+.inbox-toolbar{margin-top:22px;padding:13px 15px;display:flex;justify-content:space-between;gap:8px;border-radius:12px 12px 0 0;background:#051d31a6;border:1px solid #ffffff30;color:#cde3ed;font-size:12px}
+.inbox-toolbar span:last-child{color:#9cf7e5}
+.inbox-list{border:1px solid #ffffff30;border-top:0;border-radius:0 0 13px 13px;overflow:hidden}
+.inbox-item{display:flex;align-items:center;gap:15px;width:100%;padding:17px 15px;text-align:left;background:linear-gradient(115deg,#ffffff1e,#ffffff09);color:#fff;border:0;border-bottom:1px solid #ffffff22;cursor:pointer;transition:background .2s,transform .2s}
+.inbox-item:last-child{border-bottom:0}.inbox-item:hover{background:#b8faff26}.inbox-item.done{background:#041d3152;opacity:.78}
+.mail-icon{width:38px;height:38px;display:grid;place-items:center;flex:none;border-radius:11px;background:#8ee8dd25;border:1px solid #a3fff268;color:#b3fff2;font-size:18px;box-shadow:inset 0 1px #fff4}
+.mail-detail{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1}.mail-detail strong{font-size:14px;line-height:1.5;font-weight:750;overflow-wrap:anywhere}.mail-meta{font-size:10px;color:#9dc4d7;letter-spacing:.3px}
+.mail-status{flex:none;font-size:11px;color:#b7fff2;padding:7px 9px;border-radius:20px;background:#63cfba1c;border:1px solid #9bffe16b;font-weight:800}.done .mail-status{color:#c7d4dc;border-color:#ffffff38;background:#ffffff12}
+.backlink{border:0;background:none;color:#a8fff0;font-weight:700;padding:0 0 16px;cursor:pointer;font-size:13px}
+#game>.meta{margin-top:22px}
+@media(max-width:600px){.inbox-item{gap:10px;padding:14px 10px}.mail-icon{width:31px;height:34px;font-size:15px}.mail-status{font-size:9px;padding:5px 7px}.mail-detail strong{font-size:12px}.mail-meta{font-size:9px}.inbox-counter{min-width:80px;padding:10px}.inbox-counter strong{font-size:26px}.inbox-head .muted{font-size:11px}}
+</style>
+</head><body><div class="top"><span>LAUGHTER DEFENSE COMMAND / LDC</span><span>INTERNAL NETWORK · LEVEL 01</span></div><div class="shell"><div class="govbar"><span><strong>LDC · 디지털 안전보장회의</strong> | 웃음방위사령부 전산운영처</span><span>운영시간 00:00~24:00</span></div><div class="sheet"><div class="inner"><div class="mast"><div class="seal" aria-label="웃음방위사령부 휘장"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.8"><path d="M32 4 54 13v18c0 16-10 24-22 29C20 55 10 47 10 31V13L32 4Z"/><path d="M20 27h24M25 20l7-8 7 8M21 34c5 9 17 9 22 0"/><circle cx="25" cy="26" r="1.5" fill="currentColor"/><circle cx="39" cy="26" r="1.5" fill="currentColor"/></svg></div><div><div class="eyebrow">웃음방위사령부 · LDC</div><h1>안전보장회의<br>인트라넷</h1><div class="subtitle">NATIONAL LAUGHTER SECURITY COUNCIL</div></div></div><div class="ribbon"><span>문서번호 LDC-NSC-2026</span><span>내부 열람 전용</span><span>제 1급 웃음기밀</span></div>
+<section id="login"><span class="stamp">접근 제한</span><div class="panel"><div class="section-tag">01 / PERSONNEL IDENTIFICATION</div><h2>간부 신원 확인</h2><p class="muted">사전 허가 받은 간부만 입장할 수 있습니다.</p><label class="field-label" for="identity">간부 님의 성함을 선택해 주십시오.</label><select id="identity"><option value="">— 성함 선택 —</option></select><button class="btn" id="enter">인트라넷 접속 승인 요청 →</button><p class="muted">※ 본 시스템은 친구들끼리 즐기는 모의 인트라넷이며 실제 보안 인증을 제공하지 않습니다.</p></div></section>
+<section id="game" class="hidden"><div class="meta"><span class="tag" id="welcome"></span><button id="switch" class="btn secondary" style="width:auto;margin:0;padding:8px 12px;min-height:0">간부 변경</button></div><div id="inbox" class="panel"><div class="section-tag">LDC GROUPWARE / OFFICIAL INBOX</div><div class="inbox-head"><div><h2>전자문서 수신함</h2><p class="muted" id="inboxGreeting"></p></div><div class="inbox-counter"><strong id="pendingCount">10</strong><span>처리 대기</span></div></div><div class="inbox-toolbar"><span>받은 안건 <b id="totalCount">10</b>건</span><span>읽지 않은 문서 ●</span></div><div id="inboxList" class="inbox-list"></div><p class="muted" style="margin-top:20px">※ 안건을 선택하여 표결을 진행하십시오. 표결 완료 후 현재까지의 의결 결과가 즉시 공개됩니다.</p></div><div id="agendaPanel" class="panel hidden"><button class="backlink" id="backInbox">← 전자문서 수신함으로 돌아가기</button><div class="section-tag" id="agendaNo">안전보장회의 / 심의 안건</div><div id="waiting"><h2>심의 안건 대기 중</h2><p class="muted">현재 등록된 안건이 없습니다. 사령부 관리자가 questions.js에 안건을 등록하면 표결이 시작됩니다.</p></div><div id="agenda" class="hidden"><div class="question" id="question"></div><div id="ballot"><p class="muted">본 안건에 가장 적합하다고 판단되는 간부 한 명을 지목하여 표결하십시오.</p><div class="candidates" id="candidates"></div><button class="btn" id="submit" disabled>표결 확정 및 의결 결과 열람 →</button></div><div id="results" class="hidden"><div class="stamp">의결 결과</div><h2>실시간 표결 현황</h2><p class="muted" id="count"></p><div id="resultRows"></div><p class="muted">다른 간부의 표결이 반영되면 현황이 자동 갱신됩니다.</p></div><div id="connection" class="status"></div><button class="btn secondary" id="backAfter">수신함으로 돌아가기 →</button></div></div></section>
+<div class="notice"><b>행정 안내</b><br>표결 완료 직후 현재 의결 결과를 확인할 수 있습니다. 미참석 간부의 표결을 기다리지 않습니다. 동일 이름을 선택한 타인이 대신 표결할 수 있으므로 링크는 친구들에게만 공유하십시오.</div><div class="footer"><span>웃음방위사령부 전산운영처</span><span>UNAUTHORIZED SERIOUSNESS PROHIBITED</span></div></div></div></div>
+<script src="questions.js"></script><script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script><script>
+const NAMES=['향비','서윤','현지','새봄','해인','진경','다운','효빈','연주','예은','동은','수연','지민','하연','삭'];
+const $=id=>document.getElementById(id);NAMES.forEach(name=>{let o=document.createElement('option');o.value=name;o.textContent=name;$('identity').appendChild(o)});
+const QUESTIONS=Array.isArray(window.LDC_QUESTIONS)?window.LDC_QUESTIONS.filter(q=>typeof q==='string'&&q.trim()):[];
+const cfg=window.LDC_CONFIG||{},configured=!!(cfg.supabaseUrl&&cfg.supabaseAnonKey&&!cfg.supabaseUrl.includes('YOUR_'));
+const db=configured&&window.supabase?window.supabase.createClient(cfg.supabaseUrl,cfg.supabaseAnonKey):null;
+let officer='',idx=0,pick='',subscription=null,poll=null;
+function setStatus(s,err=false){$('connection').textContent=s;$('connection').className='status '+(err?'error':'success')}
+function key(){return 'ldc-vote-'+idx+'-'+officer}
+function enter(){if(!$('identity').value)return;officer=$('identity').value;sessionStorage.setItem('ldc-officer',officer);$('login').classList.add('hidden');$('game').classList.remove('hidden');$('welcome').textContent=officer+' 간부 · 접속 승인';$('inboxGreeting').textContent=officer+' 간부님, 처리해야 할 심의 안건이 있습니다.';renderInbox()}
+$('enter').onclick=enter;$('identity').onchange=()=>$('enter').disabled=!$('identity').value;$('enter').disabled=true;
+$('switch').onclick=()=>{if(subscription){db?.removeChannel(subscription);subscription=null}if(poll)clearInterval(poll);sessionStorage.removeItem('ldc-officer');$('game').classList.add('hidden');$('login').classList.remove('hidden')};
+const saved=sessionStorage.getItem('ldc-officer');if(NAMES.includes(saved)){$('identity').value=saved;enter()}
+function renderInbox(){
+ if(subscription){db?.removeChannel(subscription);subscription=null}if(poll){clearInterval(poll);poll=null}
+ $('agendaPanel').classList.add('hidden');$('inbox').classList.remove('hidden');
+ $('totalCount').textContent=QUESTIONS.length;
+ const completed=QUESTIONS.filter((_,i)=>localStorage.getItem('ldc-vote-'+i+'-'+officer)==='1').length;
+ $('pendingCount').textContent=QUESTIONS.length-completed;
+ $('inboxList').replaceChildren();
+ QUESTIONS.forEach((q,i)=>{
+  const done=localStorage.getItem('ldc-vote-'+i+'-'+officer)==='1';
+  const row=document.createElement('button');row.className='inbox-item'+(done?' done':'');
+  const icon=document.createElement('span');icon.className='mail-icon';icon.textContent=done?'✓':'✉';
+  const detail=document.createElement('span');detail.className='mail-detail';
+  const meta=document.createElement('span');meta.className='mail-meta';meta.textContent='안전보장회의 사무국 · LDC-2026-'+String(i+1).padStart(3,'0');
+  const title=document.createElement('strong');title.textContent=q;
+  detail.append(meta,title);
+  const status=document.createElement('span');status.className='mail-status';status.textContent=done?'의결 완료':'미처리';
+  row.append(icon,detail,status);row.onclick=()=>{idx=i;showAgenda()};$('inboxList').append(row)
+ });
+ if(!QUESTIONS.length){$('inboxList').textContent='접수된 심의 안건이 없습니다.'}
+ if(db)syncInbox();
+}
+async function syncInbox(){try{const {data,error}=await db.from('votes').select('agenda_id').eq('voter',officer);if(error)throw error;let changed=false;(data||[]).forEach(v=>{const k='ldc-vote-'+v.agenda_id+'-'+officer;if(localStorage.getItem(k)!=='1'){localStorage.setItem(k,'1');changed=true}});if(changed && !$('inbox').classList.contains('hidden'))renderInbox()}catch(e){console.warn('수신함 상태 동기화 실패',e)}}
+function showAgenda(){
+ if(subscription){db?.removeChannel(subscription);subscription=null}if(poll){clearInterval(poll);poll=null}
+ $('inbox').classList.add('hidden');$('agendaPanel').classList.remove('hidden');
+ if(!QUESTIONS.length){$('waiting').classList.remove('hidden');$('agenda').classList.add('hidden');return}
+ $('waiting').classList.add('hidden');$('agenda').classList.remove('hidden');
+ $('agendaNo').textContent='심의 안건 '+String(idx+1).padStart(2,'0')+' / '+String(QUESTIONS.length).padStart(2,'0');
+ $('question').textContent=QUESTIONS[idx];$('results').classList.add('hidden');$('ballot').classList.remove('hidden');
+ pick='';$('submit').disabled=true;$('candidates').replaceChildren();
+ NAMES.forEach(n=>{const b=document.createElement('button');b.className='candidate';b.textContent=n;b.onclick=()=>{pick=n;document.querySelectorAll('.candidate').forEach(x=>x.classList.toggle('selected',x===b));$('submit').disabled=false};$('candidates').appendChild(b)});
+ if(localStorage.getItem(key())==='1')openResults();
+ if(db){checkAlreadyVoted();subscription=db.channel('ldc-votes-'+idx).on('postgres_changes',{event:'*',schema:'public',table:'votes',filter:'agenda_id=eq.'+idx},()=>{if(!$('results').classList.contains('hidden'))refreshResults()}).subscribe();poll=setInterval(()=>{if(!$('results').classList.contains('hidden'))refreshResults()},7000)}
+ else setStatus('시연 모드: 실제 공유 투표는 Supabase 연결 후 사용할 수 있습니다.',true)
+}
+$('backInbox').onclick=renderInbox;$('backAfter').onclick=renderInbox;
+async function checkAlreadyVoted(){try{const {data,error}=await db.from('votes').select('id').eq('agenda_id',idx).eq('voter',officer).limit(1);if(error)throw error;if(data?.length){localStorage.setItem(key(),'1');openResults()}}catch(e){setStatus('표결 상태 확인 실패: '+e.message,true)}}
+$('submit').onclick=async()=>{if(!pick)return;if(!db){setStatus('실제 표결은 Supabase 연결 후 가능합니다. 지금은 디자인 시연만 가능합니다.',true);return}$('submit').disabled=true;setStatus('표결을 전송하고 있습니다...');try{const {error}=await db.from('votes').insert({agenda_id:idx,voter:officer,candidate:pick});if(error){if(error.code==='23505'){localStorage.setItem(key(),'1');openResults();return}throw error}localStorage.setItem(key(),'1');openResults()}catch(e){setStatus('표결 실패: '+e.message,true);$('submit').disabled=false}};
+function openResults(){$('ballot').classList.add('hidden');$('results').classList.remove('hidden');refreshResults()}
+async function refreshResults(){if(!db){$('count').textContent='서버 연결 전에는 공유된 의결 결과를 표시할 수 없습니다.';return}try{const {data,error}=await db.from('votes').select('candidate').eq('agenda_id',idx);if(error)throw error;const votes=data||[],counts=Object.fromEntries(NAMES.map(n=>[n,0]));votes.forEach(v=>{if(v.candidate in counts)counts[v.candidate]++});$('count').textContent='총 '+votes.length+'명 표결 완료 · 현재까지의 결과';$('resultRows').replaceChildren();NAMES.filter(n=>counts[n]>0).sort((a,b)=>counts[b]-counts[a]).forEach(n=>{let row=document.createElement('div');row.className='result';let h=document.createElement('div');h.className='resulthead';let label=document.createElement('span');label.textContent=n;let value=document.createElement('span');value.textContent=counts[n]+'표 · '+Math.round(counts[n]/votes.length*100)+'%';h.append(label,value);let t=document.createElement('div');t.className='track';let bar=document.createElement('div');bar.className='bar';bar.style.width=counts[n]/votes.length*100+'%';t.append(bar);row.append(h,t);$('resultRows').append(row)});setStatus('실시간 의결 현황 연결됨')}catch(e){setStatus('결과 조회 실패: '+e.message,true)}}
+
+</script></body></html>
